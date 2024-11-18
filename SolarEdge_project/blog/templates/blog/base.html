@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My Blog{% endblock %}</title>
+</head>
+<body>
+    {% load static %} <!-- Load the static template tag library -->
+    <header>
+        <a href="{% url 'post_list' %}">
+            <img src="{% static 'blog/logo.png' %}" alt="Logo" style="height: 50px;">
+        </a>
+    </header>
+    <hr>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

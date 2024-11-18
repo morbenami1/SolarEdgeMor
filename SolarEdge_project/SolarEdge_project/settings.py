@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     "blog"
 ]
 
+STATIC_URL = '/static/'
+
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -50,7 +53,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "SolarEdge_project.urls"
+ROOT_URLCONF = 'SolarEdge_project.urls'
 
 TEMPLATES = [
     {

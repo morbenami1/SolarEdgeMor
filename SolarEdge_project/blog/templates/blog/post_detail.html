@@ -1,0 +1,19 @@
+{% extends "blog/base.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<h1>{{ post.title }}</h1>
+<p>{{ post.body }}</p>
+
+<h2>Comments</h2>
+<ul>
+    {% for comment in comments %}
+    <li>
+        <strong>{{ comment.name }}</strong> ({{ comment.email }}): <br>
+        {{ comment.body }}
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'post_list' %}">Back to Posts</a>
+{% endblock %}
